@@ -1,37 +1,24 @@
-import CategoriesContainer from "./components/categories-container/CategoriesContainer";
-function App() {
-  const categories = [
-    {
-      id: 1,
-      title: "hats",
-      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-    },
-    {
-      id: 2,
-      title: "jackets",
-      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    },
-    {
-      id: 3,
-      title: "sneakers",
-      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    },
-    {
-      id: 4,
-      title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    },
-    {
-      id: 5,
-      title: "mens",
-      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    },
-  ];
+import Home from "./components/routes/home/home";
+import { Route, Routes } from "react-router-dom";
+import Navigation from "./components/routes/navigation/navigation";
+import SignIn from "./components/sign-in/SignIn";
+const Shop = () => {
+  return <h1>Shop Now</h1>;
+};
+const Contact = () => {
+  return <h1>Contact Us</h1>;
+};
 
+function App() {
   return (
-    <div>
-      <CategoriesContainer categories={categories} />
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="sign-in" element={<SignIn />} />
+      </Route>
+    </Routes>
   );
 }
 
