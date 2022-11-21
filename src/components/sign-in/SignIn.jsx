@@ -21,7 +21,7 @@ const SignIn = () => {
 export default SignIn;
 
 /* auth,
-  signInWithGoogleRedirect,
+  signInWithGoogleRedirect
 import { getRedirectResult } from "firebase/auth";
 import { useEffect } from "react";
 <button onClick={signInWithGoogleRedirect}>
