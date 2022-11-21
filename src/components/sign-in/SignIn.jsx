@@ -19,20 +19,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-
-/* auth,
-  signInWithGoogleRedirect
-import { getRedirectResult } from "firebase/auth";
-import { useEffect } from "react";
-<button onClick={signInWithGoogleRedirect}>
-Sign in with Google Redirect
-</button>
-useEffect(() => {
-  const loadData = async () => {
-    const response = await getRedirectResult(auth);
-    if (response) {
-      const userDocRef = await createUserDocumentFromAuth(response.user);
-    }
-  };
-  loadData();
-}, []); */ // SIGN IN WITH REDIRECT
