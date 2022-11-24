@@ -71,7 +71,7 @@ function SignIn() {
         <div className="buttons-container">
           <Button type="submit">Sign In</Button>
           <Button type="button" onClick={signInWithGoogle} buttonType="google">
-            Sign In With Google
+            Use Google
           </Button>
         </div>
       </form>
