@@ -3,6 +3,7 @@ import "./signUp.scss";
 import Button from "../button/button";
 import { useState } from "react";
 import FormInput from "../form-input/form-input";
+
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
@@ -40,7 +41,7 @@ function SignUp() {
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
-      if (error.code == "auth/email-already-in-use") {
+      if (error.code === "auth/email-already-in-use") {
         alert("email already in use");
       } else console.log(error);
     }
